@@ -1,16 +1,23 @@
-/*registro de usuarios nuevos*/
+export const setUsers = (objUser) => {
+    return firebase.firestore().collection("users").add(objUser)
 
-export const signUp = (email, password) => {
+    }
+
+
+/* Registra usuarios nuevos */
+
+/* export const signUp = (email, password) => {
     return firebase.auth().createUserWithEmailAndPassword(email, password)}
-    /* Acceso a usuarios existentes */
-
-export const signIn = (email, password) => {
+      
+    /* Acceso a usuarios existentes 
+  
+  export const signIn = (email, password) => {
     return firebase.auth().signInWithEmailAndPassword(email, password)}
-
-/* cerrar sesion*/
+  
+     cerrar sesion
 
 export const singOut = () => {
     return firebase.auth().signOut()
  };
+  */
 
- 

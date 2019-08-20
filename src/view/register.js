@@ -18,13 +18,21 @@ export const registerVisitor = () => {
             <option value="">Amigos y familia</option>
         </select>
         <p>Propósito de visita</p>
-        <button>foto</button>
+        <video></video>
+        <button id="foto">foto</button>
         <button type="button">Registrar visita</button>
     </div>
-    `
+    `;
 
     const sectionRegister = document.createElement('section');
     sectionRegister.innerHTML = tmplRegisterVisitor;
+    const foto = document.querySelector('#foto')
+    window.URL = window.URL || window.webkitURL;
+    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+
+    navigator.getUserMedia({video:true}, function(vid){
+        document.querySelector('video').src = window.URL.createObjectURL(vid);
+    });
 
     return sectionRegister;
 }

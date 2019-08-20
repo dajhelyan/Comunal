@@ -11,7 +11,6 @@ export const registerVisitor = () => {
         <p>DNI o Carnet de Extranjeria</p>
         <input type="text">
         <p>Empresa</p>
-        
         <form>
         <input type="search" name="busquedamodelos" list="listamodelos">
         <datalist id="listamodelos">
@@ -24,7 +23,7 @@ export const registerVisitor = () => {
         </datalist>
         <p>Anfitrión(a)</p>
        </form>
-       
+
        <form>
         <input type="search" name="busquedamodelos" list="proposito">
         <datalist id="proposito">

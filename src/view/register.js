@@ -2,7 +2,7 @@ import { changeHash } from "../view-controller/firestore.js";
 import { sendToUsers } from "../controller/functions.js";
 
 export const registerVisitor = () => {
-    const sectionRegister = document.createElement('section');
+    
     const tmplRegisterVisitor = `
     <div>
         <h1>Comunal</h1>

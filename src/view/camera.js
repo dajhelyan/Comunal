@@ -18,7 +18,7 @@ export const Camera = () => {
             video.srcObject = stream;
         }).catch(console.error)
     }
-   // window.addEventListener('load', start, false);
+    window.addEventListener('load', start, false);
     var context = canvas.getContext('2d');
     foto.addEventListener('click', () => {
         context.drawImage(video, 0,0, 200,200);

@@ -1,6 +1,6 @@
 import { setUsers } from './controller-firebase.js'
 
- export const sendToUsers = (nameUser, dni, email, compañia) => {
+ export const sendToUsers = (nameUser, dni, email, compañia, host, proposito) => {
   /*   const objUser = userAcces();
     console.log(objUser); */
   let user = {
@@ -9,9 +9,9 @@ import { setUsers } from './controller-firebase.js'
     dni: dni,
     email: email,
     compañia: compañia,
-    // host: host,
+    host: host,
     fecha: new Date(),
-    //proposito: proposito,
+    proposito: proposito,
     //salida: salida
 
   }

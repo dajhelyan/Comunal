@@ -26,7 +26,6 @@ export const registerVisitor = () => {
         </datalist>
         <p>Anfitrión(a)</p>
        </form>
-
        <form>
         <input type="search" name="busquedamodelos" list="proposito">
         <datalist id="proposito">
@@ -41,20 +40,17 @@ export const registerVisitor = () => {
         <button type="button" id="register-visitor">Registrar visita</button>
     </div>
     `;
-
-    const sectionRegister = document.createElement('section');
     sectionRegister.innerHTML = tmplRegisterVisitor;
 
     const dni = sectionRegister.querySelector('#dni');
     const nombre = sectionRegister.querySelector('#nombre');
     const email = sectionRegister.querySelector('#email');
     const empresa = sectionRegister.querySelector('#empresa'); 
-    const host = sectionRegister.querySelector('#host')
+   // const host = sectionRegister.querySelector('#host')
     //const proposito = sectionRegister.querySelector('#purposeOfVisit')
      
     sectionRegister.querySelector('#register-visitor').addEventListener('click', () => {
-        sendToUsers(nombre.value, dni.value, email.value, empresa.value, host.value )
-        
+        sendToUsers(nombre.value, dni.value, email.value, empresa.value) 
         return changeHash('#/welcome')
     })
 

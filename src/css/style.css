@@ -1,7 +1,11 @@
 video {
-    background-color: brown;
     display: block;
-    height: 200px;
-    width: 200px;
+    height: 100%;
+    width: 100%;
     margin: auto;
+}
+
+.foto{
+    width: 60%;
+    height: 30%;
 }

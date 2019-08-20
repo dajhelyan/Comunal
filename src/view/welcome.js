@@ -1,6 +1,5 @@
-
-
 export const welcomeUser = () => {
+    const sectionWelcome = document.createElement('section');
     const tmpl = `
     <div>
         <h1>¡Bienevedx a Comunal</h1>
@@ -9,9 +8,12 @@ export const welcomeUser = () => {
             <p>etdxt</p>
         </div>
         <button>Enviar info a mi email</button>
+        <form action="mailto:loquesea@algo.com">
+        <input type="submit" />
+        </form>
+        <a href="mailto:scahuantico@gmail.com"> Enviar correo </a> 
     </div>    
     `
-    const sectionWelcome = document.createElement('section');
     sectionWelcome.innerHTML = tmpl;
 
     return sectionWelcome;

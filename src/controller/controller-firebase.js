@@ -3,6 +3,10 @@ export const setUsers = (objUser) => {
 
     }
 
+export const setVisit = (objVisit) => {
+  return firebase.firestore().collection("visit").add(objVisit)
+}
+
 /* Registra usuarios nuevos */
 
 /* export const signUp = (email, password) => {

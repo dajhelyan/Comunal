@@ -1,6 +1,6 @@
 import { setUsers } from './controller-firebase.js'
 
- export const sendToUsers = (nameUser, dni, email, compañia, host) => {
+ export const sendToUsers = (nameUser, dni, email, compañia) => {
   /*   const objUser = userAcces();
     console.log(objUser); */
   let user = {
@@ -9,8 +9,7 @@ import { setUsers } from './controller-firebase.js'
     dni: dni,
     email: email,
     compañia: compañia,
-    host: host,
-    fecha: new Date(),
+    //host: host,
     //proposito: proposito,
     //salida: salida
 
@@ -26,7 +25,31 @@ import { setUsers } from './controller-firebase.js'
     });
 }
 
+export const sendToVisit = (dni, host, foto ) => {
+  /*   const objUser = userAcces();
+    console.log(objUser); */
+  let user = {
+    dni: dni,
+    foto: urlfoto,
+    fecha: new Date(),
+    host: host,
+    fecha: new Date(),
+    proposito: proposito,
+    salida: salida
 
+  }
+  return setUsers(user)
+    .then((docRef) => {
+      console.log(user)
+      console.log(docRef)
+
+    })
+    .catch(function (error) {
+      console.error('Error adding document: ', error);
+    });
+}
+
+/*
 let messaging = firebase.messaging();
 
 messaging.requestPermission()
@@ -41,3 +64,4 @@ messaging.requestPermission()
   mensajeFeedback(err);
     console.log('Error Ocurred.', err);
 })
+*/

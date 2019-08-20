@@ -1,3 +1,4 @@
+import { changeHash } from "../view-controller/firestore.js";
 
 
 export const registerVisitor = () => {
@@ -18,9 +19,8 @@ export const registerVisitor = () => {
             <option value="">Amigos y familia</option>
         </select>
         <p>Propósito de visita</p>
-        <video></video>
-        <button id="foto">foto</button>
-        <button type="button">Registrar visita</button>
+        <button>foto</button>
+        <button type="button" id="register-visitor">Registrar visita</button>
     </div>
     `;
 
@@ -33,6 +33,10 @@ export const registerVisitor = () => {
     navigator.getUserMedia({video:true}, function(vid){
         document.querySelector('video').src = window.URL.createObjectURL(vid);
     });
+
+    sectionRegister.querySelector('#register-visitor').addEventListener('click', () => {
+        return changeHash('#/welcome')
+    })
 
     return sectionRegister;
 }

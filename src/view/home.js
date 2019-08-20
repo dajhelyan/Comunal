@@ -4,7 +4,7 @@ export const viewHome = () => {
     const tmplHome = `
     <h3>Bienvenido a Comunal</h3>
     <button type="button" id="btn-page-register">Registra tu visita</button>
-    <a href="">¿Haz estado aqui antes?</a>
+    <a href="#/user">¿Haz estado aqui antes?</a>
     `
 
     const sectionHome = document.createElement('section');

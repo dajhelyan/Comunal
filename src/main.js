@@ -14,5 +14,4 @@ export const init = () => {
     firebase.initializeApp(firebaseConfig);
     initRouter();
 }
-
 window.onload = init();

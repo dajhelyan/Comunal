@@ -25,3 +25,19 @@ import { setUsers } from './controller-firebase.js'
       console.error('Error adding document: ', error);
     });
 }
+
+
+let messaging = firebase.messaging();
+
+messaging.requestPermission()
+.then(function() {
+    console.log('Have permission');
+   // return messaging.getToken();
+})
+.then(function(token) {
+    console.log(token);
+})
+.catch(function(err) {
+  mensajeFeedback(err);
+    console.log('Error Ocurred.', err);
+})

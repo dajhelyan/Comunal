@@ -3,7 +3,6 @@ export const setUsers = (objUser) => {
 
     }
 
-
 /* Registra usuarios nuevos */
 
 /* export const signUp = (email, password) => {

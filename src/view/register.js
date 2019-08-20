@@ -2,6 +2,7 @@ import { changeHash } from "../view-controller/firestore.js";
 import { sendToUsers } from "../controller/functions.js";
 
 export const registerVisitor = () => {
+    const sectionRegister = document.createElement('section');
     const tmplRegisterVisitor = `
     <div>
         <h1>Comunal</h1>
@@ -13,30 +14,34 @@ export const registerVisitor = () => {
         <p>Correo electrónico</p>
         <input type="text" id="empresa" placeholder ='Empresa'>
         <p>Empresa</p>
-        <input type="text" id="host" placeholder ='Anfitrión(a)'>
+        
+        <form>
+        <input type="search" name="busquedamodelos" list="listamodelos">
+        <datalist id="listamodelos">
+             <option value="Elvia Vega">
+             <option value="Day">
+             <option value="Nadia Gabriela">
+             <option value="Andrea Ux">
+             <option value="Alejandra">
+             <option value="Susana">
+        </datalist>
         <p>Anfitrión(a)</p>
-        <select name="" id="purposeOfVisit" placeHolder="seleccionar">
-            <option value="">reunión</option>
-            <option value="">Entrevista</option>
-            <option value="">Amigos y familia</option>
-        </select>
-        <p>Propósito de visita</p>
-        <button>foto</button>
+       </form>
+       
+       <form>
+        <input type="search" name="busquedamodelos" list="proposito">
+        <datalist id="proposito">
+             <option value="Reunión">
+             <option value="Entrevista">
+             <option value="Amigos y familia">
+             <option value="Otros">
+        </datalist>
+        <p> Próposito de visita </p>
+       </form>
+        <a href="#/camera"> Cam </a>
         <button type="button" id="register-visitor">Registrar visita</button>
     </div>
-    `
-
-
-
-
-
-
-
-
-
-
-
-
+    `;
 
     const sectionRegister = document.createElement('section');
     sectionRegister.innerHTML = tmplRegisterVisitor;

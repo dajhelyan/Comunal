@@ -15,6 +15,8 @@ const changeView = (route) => {
             return root.appendChild(components.user());
         case '#/welcome':
             return root.appendChild(components.welcome());
+        case '#/camera':
+            return root.appendChild(components.camera());
         default:
             break;
     }

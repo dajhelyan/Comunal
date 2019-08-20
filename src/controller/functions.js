@@ -1,22 +1,23 @@
 import { setUsers } from './controller-firebase.js'
 
-export const sendToUsers = (urlfoto, nameUser, dni, email, compañia, host, proposito, salida) => {
+ export const sendToUsers = (nameUser, dni, email, compañia, host) => {
   /*   const objUser = userAcces();
     console.log(objUser); */
   let user = {
-    foto: urlfoto,
+    //foto: urlfoto,
     name: nameUser,
     dni: dni,
     email: email,
     compañia: compañia,
     host: host,
     fecha: new Date(),
-    proposito: proposito,
-    salida: salida
+    //proposito: proposito,
+    //salida: salida
 
   }
   return setUsers(user)
     .then((docRef) => {
+      console.log(user)
       console.log(docRef)
 
     })

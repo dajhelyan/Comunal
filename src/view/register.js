@@ -1,3 +1,4 @@
+import { changeHash } from "../view-controller/firestore.js";
 
 
 export const registerVisitor = () => {
@@ -19,12 +20,16 @@ export const registerVisitor = () => {
         </select>
         <p>Propósito de visita</p>
         <button>foto</button>
-        <button type="button">Registrar visita</button>
+        <button type="button" id="register-visitor">Registrar visita</button>
     </div>
     `
 
     const sectionRegister = document.createElement('section');
     sectionRegister.innerHTML = tmplRegisterVisitor;
+
+    sectionRegister.querySelector('#register-visitor').addEventListener('click', () => {
+        return changeHash('#/welcome')
+    })
 
     return sectionRegister;
 }

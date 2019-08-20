@@ -10,8 +10,11 @@ const changeView = (route) => {
         case '#/home':
             return root.appendChild(components.home());
         case '#/register':
-            return root.appendChild(components.registerVisitor())
-        
+            return root.appendChild(components.registerVisitor());
+        case '#/user':
+            return root.appendChild(components.user());
+        case '#/welcome':
+            return root.appendChild(components.welcome());
         default:
             break;
     }

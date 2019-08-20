@@ -1,33 +1,24 @@
-import {components} from './components.js';
-
-const changetmp = (hash) => {
-    if(hash === "" || hash ==='#' || hash === '#/'){
-        return changeView('#/home')
-    }else if (hash === '#/home' || hash === '#/mesero') {
-        return changeView(hash);
-    } else if (hash === '#home' || hash === '#/cocinero'){
-        return changeView(hash);
-    } else {
-        return changeView('#/home');
-    }
-}
+import { components } from '../view/components.js';
 
 const changeView = (route) => {
     const root = document.getElementById("root");
     root.innerHTML = "";
     switch (route) {
-        case '#/home':  root.appendChild(components.home())
-        break;
-        case '#/mesero': root.appendChild(components.order())
-        break;
-        case '#/cocinero': root.appendChild(components.cheff())
-        break;
+        case '':
+        case '#':
+        case '#/':
+        case '#/home':
+            return root.appendChild(components.home());
+        case '#/register':
+            return root.appendChild(components.registerVisitor())
+        
         default:
             break;
-    }       
+    }
 }
 
-export const init = () => {
-    window.addEventListener('load',changetmp(window.location.hash))
-    if(("onhashchange" in window)) window.onhashchange = () => changetmp(window.location.hash)
+export const initRouter = () => {
+    changeView(window.location.hash)
+    window.addEventListener('hashchange', () => { changeView(window.location.hash) })
+
 }

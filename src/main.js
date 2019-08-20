@@ -1,4 +1,6 @@
-export const initFirebase = () => {
+import { initRouter } from './view-controller/routes.js'
+
+export const init = () => {
     const firebaseConfig = {
         apiKey: "AIzaSyDaAmhGu9QUW3cmaoaQWm5Speouts2Qvr0",
         authDomain: "comunal-3f620.firebaseapp.com",
@@ -13,4 +15,4 @@ export const initFirebase = () => {
     initRouter();
 }
 
-window.onload = initFirebase();
+window.onload = init();

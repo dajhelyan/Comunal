@@ -24,3 +24,4 @@ export const sendToUsers = (urlfoto,nameUser, dni,email, compañia, host,proposi
         console.error('Error adding document: ', error);
         });      
     }
+

@@ -25,14 +25,8 @@ export const Camera = () => {
             console.log(video.srcObject)
         }).catch(console.error)
     }
-<<<<<<< HEAD
     window.addEventListener('load', start, false);
     var context = canvas.getContext('2d');
-=======
- window.addEventListener('load', start, false);
-    let context = canvas.getContext('2d');
-   console.log(context)
->>>>>>> 578b8157c0253b0a9d592d4a6d8885dd8039d1eb
     foto.addEventListener('click', () => {
         context.drawImage(video, 50,20, 100,100);
         var data = canvas.toDataURL('image/png');

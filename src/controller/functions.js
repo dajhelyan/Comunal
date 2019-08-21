@@ -9,14 +9,9 @@ export const sendToUsers = (nameUser, dni, email, compañia, host, proposito) =>
     dni: dni,
     email: email,
     compañia: compañia,
-<<<<<<< HEAD
     host: host,
     fecha: new Date(),
     proposito: proposito,
-=======
-    //host: host,
-    //proposito: proposito,
->>>>>>> 578b8157c0253b0a9d592d4a6d8885dd8039d1eb
     //salida: salida
 
   }
@@ -53,7 +48,6 @@ export const sendToVisit = (dni, host, urlfoto, proposito ) => {
     });
 }
 
-<<<<<<< HEAD
 /* 
 let messaging = firebase.messaging();
 
@@ -69,26 +63,3 @@ messaging.requestPermission()
     mensajeFeedback(err);
     console.log('Error Ocurred.', err);
   }) */
-=======
-/* export const getDataHost = () => {
-  getHost()
-  
-} */
-
-/*
-let messaging = firebase.messaging();
-
-messaging.requestPermission()
-.then(function() {
-    console.log('Have permission');
-   // return messaging.getToken();
-})
-.then(function(token) {
-    console.log(token);
-})
-.catch(function(err) {
-  mensajeFeedback(err);
-    console.log('Error Ocurred.', err);
-})
-*/
->>>>>>> 578b8157c0253b0a9d592d4a6d8885dd8039d1eb

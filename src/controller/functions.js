@@ -1,6 +1,6 @@
 import { setUsers, setVisit, getHost } from './controller-firebase.js'
 
- export const sendToUsers = (nameUser, dni, email, compañia) => {
+export const sendToUsers = (nameUser, dni, email, compañia, host, proposito) => {
   /*   const objUser = userAcces();
     console.log(objUser); */
   let user = {
@@ -9,8 +9,14 @@ import { setUsers, setVisit, getHost } from './controller-firebase.js'
     dni: dni,
     email: email,
     compañia: compañia,
+<<<<<<< HEAD
+    host: host,
+    fecha: new Date(),
+    proposito: proposito,
+=======
     //host: host,
     //proposito: proposito,
+>>>>>>> e28707114e08accf53690ce7599dd3d20134c5ee
     //salida: salida
 
   }
@@ -47,6 +53,23 @@ export const sendToVisit = (dni, host, urlfoto, proposito ) => {
     });
 }
 
+<<<<<<< HEAD
+/* 
+let messaging = firebase.messaging();
+
+messaging.requestPermission()
+  .then(function () {
+    console.log('Have permission');
+    // return messaging.getToken();
+  })
+  .then(function (token) {
+    console.log(token);
+  })
+  .catch(function (err) {
+    mensajeFeedback(err);
+    console.log('Error Ocurred.', err);
+  }) */
+=======
 /* export const getDataHost = () => {
   getHost()
   
@@ -68,3 +91,4 @@ messaging.requestPermission()
     console.log('Error Ocurred.', err);
 })
 */
+>>>>>>> e28707114e08accf53690ce7599dd3d20134c5ee

@@ -13,7 +13,7 @@ export const viewHome = () => {
       </div>
     </div>
     `;
-    
+
     const sectionHome = document.createElement('section');
     sectionHome.className = 'fondoimage col-12';
     //const imgFondo = document.createElement('img')

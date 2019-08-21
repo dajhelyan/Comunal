@@ -147,3 +147,8 @@ video {
    border-right: 1px solid #cccccc; 
    border-left: 2px solid #666666; 
 }
+
+.logoDash{
+    width: 10px;
+    height: 10px;
+}

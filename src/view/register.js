@@ -16,7 +16,7 @@ export const registerVisitor = () => {
         <p>Empresa</p>
         
         <form>
-        <input type="search" name="busquedamodelos" list="listamodelos">
+        <input type="search" name="busquedamodelos" list="listamodelos" id="host">
         <datalist id="listamodelos">
              <option value="Elvia Vega">
              <option value="Day">
@@ -29,7 +29,7 @@ export const registerVisitor = () => {
        </form>
        
        <form>
-        <input type="search" name="busquedamodelos" list="proposito">
+        <input type="search" name="busquedamodelos" list="proposito" id="purposeOfVisit">
         <datalist id="proposito">
              <option value="Reunión">
              <option value="Entrevista">
@@ -51,12 +51,12 @@ export const registerVisitor = () => {
     const email = sectionRegister.querySelector('#email');
     const empresa = sectionRegister.querySelector('#empresa'); 
     const host = sectionRegister.querySelector('#host')
-    //const proposito = sectionRegister.querySelector('#purposeOfVisit')
+    const proposito = sectionRegister.querySelector('#purposeOfVisit')
 
     
      
     sectionRegister.querySelector('#register-visitor').addEventListener('click', () => {
-        sendToUsers(nombre.value, dni.value, email.value, empresa.value, host.value )
+        sendToUsers(nombre.value, dni.value, email.value, empresa.value, host.value, proposito.value )
         
         return changeHash('#/welcome')
     })

@@ -29,5 +29,4 @@ const changeView = (route) => {
 export const initRouter = () => {
     changeView(window.location.hash)
     window.addEventListener('hashchange', () => { changeView(window.location.hash) })
-
 }

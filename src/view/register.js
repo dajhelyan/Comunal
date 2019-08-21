@@ -4,6 +4,15 @@ import { sendToUsers } from "../controller/functions.js";
 export const registerVisitor = () => {
     const tmplRegisterVisitor = `
     <div> 
+    <nav class="navbar">
+    <div class="nav-wrapper nav">
+            <a href="#/home" class="brand-logo center">
+                <img src="../assets/ComunalLogo.png" class="logo-nav">
+            </a>
+        </div>
+    </nav>
+    
+
     <div class="cam"> <a href="#/camera"> <img src="image/right-arrow.png"> </a> </div>
     <h1>Comunal</h1> 
     <input type="text" id="dni" placeholder ='DNI o Carnet de Extranjeria'>

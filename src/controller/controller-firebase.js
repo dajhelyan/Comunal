@@ -71,15 +71,9 @@ export const getHost = (callback) => {
 
 export const signUp = (email, password) => {
     return firebase.auth().createUserWithEmailAndPassword(email, password)}
-<<<<<<< HEAD
-
-    /* Acceso a usuarios existentes
-
-=======
       
      Acceso a usuarios existentes 
   
->>>>>>> e28707114e08accf53690ce7599dd3d20134c5ee
   export const signIn = (email, password) => {
     return firebase.auth().signInWithEmailAndPassword(email, password)}
 

@@ -17,4 +17,3 @@ export const welcomeUser = () => {
     return sectionWelcome;
 }
 
-//daniela.gonzales@laboratoria.la

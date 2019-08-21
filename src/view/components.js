@@ -5,6 +5,7 @@ import { existingUser } from './existingUser.js'
 import { welcomeUser } from './welcome.js'
 import { Camera} from './camera.js'
 import { Administrador } from './administrador.js'
+import { Dashboard } from './dashboard.js'
 
 const components = {
     home: viewHome,
@@ -12,7 +13,8 @@ const components = {
     user: existingUser,
     welcome: welcomeUser,
     camera: Camera,
-    administrador: Administrador
+    administrador: Administrador, 
+    dashboard: Dashboard 
 }
 
 export { components };

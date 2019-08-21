@@ -46,11 +46,12 @@ export const registerVisitor = () => {
         const nombre = sectionRegister.querySelector('#nombre');
         const email = sectionRegister.querySelector('#email');
         const empresa = sectionRegister.querySelector('#empresa'); 
-        const host = sectionRegister.querySelector('#hostlist')
-        const proposito = sectionRegister.querySelector('#propoVisit')
+        //const host = sectionRegister.querySelector('#hostlist')
+        //const proposito = sectionRegister.querySelector('#propoVisit')
      
         sectionRegister.querySelector('#register-visitor').addEventListener('click', () => {
-            sendToUsers(nombre.value, dni.value, email.value, empresa.value, host.value, proposito.value)
+            sendToUsers(nombre.value, dni.value, email.value, empresa.value)
+
         return changeHash('#/welcome')
     })
     return sectionRegister;

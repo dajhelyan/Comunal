@@ -8,6 +8,7 @@ export const viewHome = () => {
     <div class="contenedor-home">
         <img src="../assets/ComunalLogo.png" class="logo">
         <div>
+        <a href="#/administrador"> Administrador </a>
             <button type="button" class="btn-home" id="btn-page-register">Registra tu visita aquí</button>
             <a href="#/user">¿Haz estado aqui antes?</a>
         </div>

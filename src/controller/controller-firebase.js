@@ -1,6 +1,6 @@
-export const setUsers = (objUser) => {
-  return firebase.firestore().collection("users").doc(`${objUser.dni}`).set(objUser)
-
+export const setUsers = (dni,objUser) => {
+  return firebase.firestore().collection("users").doc(dni).set(objUser)
+  //return firebase.firestore().collection("users").doc(`${objUser.dni}`).set(objUser)
 }
 
 export const setVisit = (objVisit) => {
@@ -9,8 +9,7 @@ export const setVisit = (objVisit) => {
 
 export const getHost = (callback) => {
   firebase.firestore().collection('host')
-  .onSnapshot((querySnapshot) => {
-  
+  .get((querySnapshot) => {
     const data = [];
     querySnapshot.forEach((doc) => {
       console.log(doc.data().id)
@@ -18,8 +17,7 @@ export const getHost = (callback) => {
         nombre:doc.data().nombre,
         dni: doc.data().dni,
         email: doc.data().email,
-        compañia: doc.data().compañia
-           
+        compañia: doc.data().compañia   
         })
       
     });
@@ -47,24 +45,3 @@ export const getVisit =(callback) => {
   })
 }
 
-
-/* export const getHost = (dni) => {
-  return firebase.firestore().collection('host').doc(dni).get();
-};
- 
- Registra usuarios nuevos 
-
-export const signUp = (email, password) => {
-    return firebase.auth().createUserWithEmailAndPassword(email, password)}
-
-    /* Acceso a usuarios existentes
-
-  export const signIn = (email, password) => {
-    return firebase.auth().signInWithEmailAndPassword(email, password)}
-
-     cerrar sesion
-
-export const singOut = () => {
-    return firebase.auth().signOut()
- };
-  */

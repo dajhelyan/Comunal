@@ -11,11 +11,11 @@ const changeView = (route) => {
         case '#/home':
             return root.appendChild(components.home());
         case '#/register':
-                getHost(dataHost => {
+                /* getHost(dataHost => {
                     console.log(dataHost)
-                    root.innerHTML = ''; 
-            return root.appendChild(components.registerVisitor(dataHost));
-        })  
+                    root.innerHTML = '';  */
+            return root.appendChild(components.registerVisitor());
+        //})  
         case '#/user':
             return root.appendChild(components.user());
         case '#/welcome':
@@ -41,5 +41,4 @@ const changeView = (route) => {
 export const initRouter = () => {
     changeView(window.location.hash)
     window.addEventListener('hashchange', () => { changeView(window.location.hash) })
-
 }

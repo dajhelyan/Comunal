@@ -4,13 +4,11 @@ export const Camera = () => {
     const camera = `
     <section>
      <video id="video" autoplay> Video </video>
-     </section>
-    <section>
-     <button id="foto" class="foto">foto </button>
+     <a href="#/welcome" id="foto"> <img src="./image/botonfoto.png"></a>
         <canvas id="canvas"></canvas>
-        <img src="" id="photo" alt="photo">
-    <button id="continuar"> continuar </button>
+    </section>
     `;
+    //<img src="" id="photo" alt="photo">
     createDiv.innerHTML = camera;
     const video = createDiv.querySelector('#video')
     const foto = createDiv.querySelector('#foto')
@@ -27,7 +25,7 @@ export const Camera = () => {
             console.log(video.srcObject)
         }).catch(console.error)
     }
-    window.addEventListener('load', start, false);
+  window.addEventListener('load', start, false);
     var context = canvas.getContext('2d');
     foto.addEventListener('click', () => {
         context.drawImage(video, 50,20, 100,100);

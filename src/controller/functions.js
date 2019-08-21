@@ -8,7 +8,7 @@ import { setUsers, setVisit } from './controller-firebase.js'
     email: email,
     compañia: compañia,
     }
-  return setUsers('users', dni, user)
+  return setUsers( dni, user)
     .then((docRef) => {
       console.log(user)
       console.log(docRef)
@@ -42,6 +42,3 @@ export const sendToVisit = (nombre,dni, host, email ) => {
       console.error('Error adding document: ', error);
     });
 }
-
-
-

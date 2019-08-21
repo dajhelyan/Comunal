@@ -1,8 +1,8 @@
 import { changeHash } from "../view-controller/firestore.js";
 import { sendToUsers, sendToVisit } from "../controller/functions.js";
 
-export const registerVisitor = (dataHost) => {
-    console.log(dataHost)
+export const registerVisitor = () => {
+    //console.log(dataHost)
     const tmplRegisterVisitor = `
     <div> 
     <nav class="">
@@ -61,10 +61,10 @@ export const registerVisitor = (dataHost) => {
         const email = sectionRegister.querySelector('#email');
         const empresa = sectionRegister.querySelector('#empresa'); 
         const host = sectionRegister.querySelector('#host')
-        const proposito = sectionRegister.querySelector('#propoVisit')
+        //const proposito = sectionRegister.querySelector('#propoVisit')
      
         sectionRegister.querySelector('#register-visitor').addEventListener('click', () => {
-            const nombreHost = host.value;
+           /*  const nombreHost = host.value;
             console.log(nombreHost);
             dataHost.forEach(element => {
                 console.log(element.nombre)
@@ -73,9 +73,9 @@ export const registerVisitor = (dataHost) => {
 
                     console.log(emailHost)
                 }
-                sendToUsers(nombre.value, dni.value, email.value, empresa.value)
-                sendToVisit(nombre.value, dni.value, email.value, host.value)
-            }); 
+            }); */ 
+            sendToUsers(nombre.value, dni.value, email.value, empresa.value)
+            sendToVisit(nombre.value, dni.value, email.value, host.value,email.value)
 
                 
             //const hostEmail = host.value

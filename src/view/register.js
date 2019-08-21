@@ -1,7 +1,8 @@
 import { changeHash } from "../view-controller/firestore.js";
-import { sendToUsers } from "../controller/functions.js";
+import { sendToUsers, sendToVisit } from "../controller/functions.js";
 
-export const registerVisitor = () => {
+export const registerVisitor = (dataHost) => {
+    console.log(dataHost)
     const tmplRegisterVisitor = `
     <div> 
     <div class="cam"> <a href="#/camera"> <img src="image/right-arrow.png"> </a> </div>
@@ -18,11 +19,11 @@ export const registerVisitor = () => {
         <input type="search" name="busquedamodelos" list="listamodelos" id="host">
         <datalist id="listamodelos">
         <option value="Elvia Vega">
-             <option value="Day">
-             <option value="Nadia Gabriela">
-             <option value="Andrea Ux">
-             <option value="Alejandra">
-             <option value="Susana">
+             <option value="Nadia Montenegro">
+             <option value="Susana Cahuantico">
+             <option value="Dajhely Angles">
+             <option value="Elvia Vega">
+             <option value="Andrea Lopez">
         </datalist>
         <p>Anfitrión(a)</p>
         </form>
@@ -52,6 +53,7 @@ export const registerVisitor = () => {
         sectionRegister.querySelector('#register-visitor').addEventListener('click', () => {
             sendToUsers(nombre.value, dni.value, email.value, empresa.value)
             sendToVisit(nombre.value, dni.value, email.value, host.value,  proposito.value)
+            //const hostEmail = host.value
            return changeHash('#/welcome')
     })
     return sectionRegister;

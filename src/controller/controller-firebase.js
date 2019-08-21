@@ -9,7 +9,8 @@ export const setVisit = (objVisit) => {
 
 export const getHost = (callback) => {
   firebase.firestore().collection('host')
-  .get((querySnapshot) => {
+  .onSnapshot((querySnapshot) => {
+  
     const data = [];
     querySnapshot.forEach((doc) => {
       console.log(doc.data().id)

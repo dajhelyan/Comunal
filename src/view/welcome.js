@@ -1,4 +1,5 @@
 //import {coleccionHost} from ''
+import { changeHash } from "../view-controller/firestore.js";
 
 export const welcomeUser = () => {
     const sectionWelcome = document.createElement('section');
@@ -9,13 +10,18 @@ export const welcomeUser = () => {
             <h3>Practicas de Higiene Personal</h3>
             <p>etdxt</p>
         </div>
-        </form>
-        <a href="mailto:daniela.gonzales@laboratoria.la?body=Este%20es%20el%20cuerpo%20del%20mensaje"> Enviar correo </a>    </div>    
+        <button id="aceptar"> Aceptar </button>
+           
     `;
-    //const sendEmail = sectionWelcome.querySelector('send-email')
+   
 
     sectionWelcome.innerHTML = tmpl;
+    const aceptar = sectionWelcome.querySelector('#aceptar')
+    aceptar.addEventListener('click', () => {
+        return changeHash('#/email')
+    })
 
     return sectionWelcome;
 }
 
+//<a href="mailto:daniela.gonzales@laboratoria.la?body=Este%20es%20el%20cuerpo%20del%20mensaje"> Enviar correo </a>    </div> 

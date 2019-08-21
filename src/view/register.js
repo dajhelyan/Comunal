@@ -1,5 +1,5 @@
 import { changeHash } from "../view-controller/firestore.js";
-import { sendToUsers } from "../controller/functions.js";
+import { sendToUsers, sendToVisit,  } from "../controller/functions.js";
 
 export const registerVisitor = () => {
     const tmplRegisterVisitor = `
@@ -50,7 +50,8 @@ export const registerVisitor = () => {
         const proposito = sectionRegister.querySelector('#propoVisit')
      
         sectionRegister.querySelector('#register-visitor').addEventListener('click', () => {
-            sendToUsers(nombre.value, dni.value, email.value, empresa.value, host.value, proposito.value) 
+            sendToUsers(nombre.value, dni.value, email.value, empresa.value)
+
         return changeHash('#/welcome')
     })
 

@@ -1,4 +1,4 @@
-import { setUsers } from './controller-firebase.js'
+import { setUsers, setVisit, getHost } from './controller-firebase.js'
 
  export const sendToUsers = (nameUser, dni, email, compañia) => {
   /*   const objUser = userAcces();
@@ -14,7 +14,7 @@ import { setUsers } from './controller-firebase.js'
     //salida: salida
 
   }
-  return setUsers(user)
+  return setVisit(user)
     .then((docRef) => {
       console.log(user)
       console.log(docRef)
@@ -25,7 +25,7 @@ import { setUsers } from './controller-firebase.js'
     });
 }
 
-export const sendToVisit = (dni, host, foto ) => {
+export const sendToVisit = (dni, host, urlfoto, proposito ) => {
   /*   const objUser = userAcces();
     console.log(objUser); */
   let user = {
@@ -33,9 +33,7 @@ export const sendToVisit = (dni, host, foto ) => {
     foto: urlfoto,
     fecha: new Date(),
     host: host,
-    fecha: new Date(),
-    proposito: proposito,
-    salida: salida
+    proposito: proposito  
 
   }
   return setUsers(user)
@@ -48,6 +46,11 @@ export const sendToVisit = (dni, host, foto ) => {
       console.error('Error adding document: ', error);
     });
 }
+
+/* export const getDataHost = () => {
+  getHost()
+  
+} */
 
 /*
 let messaging = firebase.messaging();

@@ -2,35 +2,36 @@ export const Dashboard = () => {
     const tmpldashboard = `
     <section class="col-12">
     <section class="col-4">
-       <div col="">
-         <img src="./image/comunal.png" class="logodash">
-         <p> Comunal Barranco </p>
+       <div class="dashBlack">
+         <img src="./image/logocomunalblanco.png" class="logodash">
+          <select class="selectAdmin"> 
+           <option> Comunal Barranco </option>
+          </select>
        </div>
-       <div>
-         <img src=""> <p> Visitantes </p>
+       <div class="dashYellow">
+         <img src=""> <p class="pAdmin"> Visitantes </p>
        </div>
-       <div>
-         <p> Registtro de visitantes </p>
-         <p> Invitados </p>
-         <img src=""> <p> Mensajes <p>
-         <img src=""> <p> Mis tareas </p>
-         <img src=""> <p> Clientes </p>
+       <div class="dashBlack">
+         <div> <p class="pAdmin"> Registro de visitantes </p> </div>
+         <div> <p class="pAdmin"> Invitados </p> </div>
+         <div class=""> <img src="./image/gmail.png" class=""> <p class="pAdmin col-9"> Mensajes <p> </div>
+         <div> <img src="./image/icono1.png"> <p class="pAdmin"> Mis tareas </p> </div>
+         <div> <img src=""> <p class=""pAdmin> Clientes </p> </div>
        </div>
-       <div>
-          <p> Configuración </p>
+         <div class="dashBlack">
+          <p class="pAdmin"> Configuración </p>
           <div>
-            <img src=""> <p> Main Settings </p>
-            <img src=""> <p> Notificaciones </p>
+            <img src=""> <p class="pAdmin"> Main Settings </p>
+            <img src=""> <p class="pAdmin"> Notificaciones </p>
           </div>
        </div>
     </section>
-
-    <section class="col-9">
+    <section class="col-8">
     <div>
-        <p> 1 Visitante <p> 
-        <input type="search"> <button> Nuevo visitante </buttton>
+        <h3> 1 Visitante <h3> 
+        <input type="search" class="inputVisitante col-8"> <button class="btn-visitante col-3"> Nuevo visitante </buttton>
     </div>
-    <div>
+    <div class="hoy col-3">
        <button> < </button>  <button> Hoy </button> <button> > </button>
     </div>
     <div>
@@ -38,22 +39,26 @@ export const Dashboard = () => {
        <img src="">
        <img src="">
     </div>
-    <div>
-       <input type="checkbox">
-       <p> Nombre </p>
-       <p> Observaciones </p>
-       <p> DNI/C.E </p>
-       <p> Ingreso </p>
-       <p> Salida </p>
-    </div>
-    <div>
-       <input type="checkbox">
-       <p> Alex Ramírez </p>
-       <p> No hay </p>
-       <p> 74148934 </p>
-       <p> 5:15 p.m </p>
-       <p> Salió </p> 
-       <a href="#/singOut">
+    <div class="divList">
+      <table class="table">
+       <tr>
+          <td> <input type="checkbox"> </td>
+          <td> Nombre </td>
+          <td> Observaciones </td>
+          <td> DNI/C.E </td>
+          <td> Ingreso  </td>
+          <td> Salida </td>
+        </tr>
+        <tr>
+           <td> <input type="checkbox"> </td>
+           <td>  Alex Ramírez  </td>
+           <td>  No hay  </td>
+           <td> 74148934 </td>
+           <td> 5:15 p.m </td>
+           <td>  Salió </td>
+           <td> <a href="#/singOut"> </td>
+        </tr>
+       </table>
     </div>
     <a href="#/salir"> salir </a>
     </section>

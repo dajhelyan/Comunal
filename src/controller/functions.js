@@ -1,4 +1,4 @@
-import { setUsers, setVisit, getHost } from './controller-firebase.js'
+import { setUsers, setVisit } from './controller-firebase.js'
 
 export const sendToUsers = (nameUser, dni, email, compañia, host, proposito) => {
   /*   const objUser = userAcces();

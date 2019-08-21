@@ -6,12 +6,13 @@ export const registerVisitor = () => {
     const tmplRegisterVisitor = `
     <div> 
     <nav class="navbar">
-    <div class="nav-wrapper nav">
-            <a href="#/home" class="brand-logo center">
-                <img src="../assets/ComunalLogo.png" class="logo-nav">
-            </a>
+        <div class="nav-wrapper">
+        <a href="#/home" class="brand-logo nav center">
+            <img src="../assets/ComunalLogo.png" class="logo-nav">
+        </a>
         </div>
     </nav>
+    
     
 
     <div class="cam"> <a href="#/camera"> <img src="image/right-arrow.png"> </a> </div>
@@ -28,11 +29,11 @@ export const registerVisitor = () => {
         <input type="search" name="busquedamodelos" list="listamodelos" id="host">
         <datalist id="listamodelos">
         <option value="Elvia Vega">
-             <option value="Day">
-             <option value="Nadia Gabriela">
-             <option value="Andrea Ux">
-             <option value="Alejandra">
-             <option value="Susana">
+             <option value="Carlos Montesinos">
+             <option value="Margarita Flores">
+             <option value="Alex Rosales">
+             <option value="Alejandra Montenegro">
+             <option value="Susana Vegas">
         </datalist>
         <p>Anfitrión(a)</p>
        </form>

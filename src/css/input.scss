@@ -48,3 +48,20 @@ body {
         }
     }
 }
+
+.navbar {
+    height: 80px;
+    .nav { 
+        position: relative;
+        .logo-nav {
+            width: 50px;
+            margin: 15px;
+        }
+    }
+}
+
+.cam {
+    position: absolute;
+    top: 20px;
+    left: 500px;
+}

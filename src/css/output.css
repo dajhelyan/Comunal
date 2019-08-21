@@ -15,12 +15,7 @@ body {
 .contenedor-home {
   position: absolute;
   top: 18%;
-  left: 135px;
-  /* h3 {
-      font-size: 45px;
-      color: whitesmoke;
-      margin-bottom: 180px;
-  } */ }
+  left: 135px; }
   .contenedor-home .logo {
     width: 200px;
     margin-left: 23px;
@@ -45,5 +40,18 @@ body {
       color: white;
       font-size: 20px;
       margin-bottom: 20px; }
+
+.navbar {
+  height: 80px; }
+  .navbar .nav {
+    position: relative; }
+    .navbar .nav .logo-nav {
+      width: 50px;
+      margin: 15px; }
+
+.cam {
+  position: absolute;
+  top: 20px;
+  left: 500px; }
 
 /*# sourceMappingURL=output.css.map */

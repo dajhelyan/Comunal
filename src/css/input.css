@@ -60,4 +60,23 @@ body {
   font-size: 20px;
   margin-bottom: 20px;
 }
+
+.navbar {
+  height: 80px;
+}
+
+.navbar .nav {
+  position: relative;
+}
+
+.navbar .nav .logo-nav {
+  width: 50px;
+  margin: 15px;
+}
+
+.cam {
+  position: absolute;
+  top: 20px;
+  left: 500px;
+}
 /*# sourceMappingURL=input.css.map */

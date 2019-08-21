@@ -54,6 +54,7 @@ export const Dashboard = () => {
        </table>
     </div>
     <a href="#/salir"> salir </a>
+    <a href="#/register"> Nuevo Visitante </a>
     `;
     const sectionDashboard = document.createElement('section');
     sectionDashboard.innerHTML = tmpldashboard;

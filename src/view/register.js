@@ -6,12 +6,13 @@ export const registerVisitor = (dataHost) => {
     const tmplRegisterVisitor = `
     <div> 
     <nav class="navbar">
-    <div class="nav-wrapper nav">
-            <a href="#/home" class="brand-logo center">
-                <img src="../assets/ComunalLogo.png" class="logo-nav">
-            </a>
+        <div class="nav-wrapper">
+        <a href="#/home" class="brand-logo nav center">
+            <img src="../assets/ComunalLogo.png" class="logo-nav">
+        </a>
         </div>
     </nav>
+    
     
 
     <div class="cam"> <a href="#/camera"> <img src="image/right-arrow.png"> </a> </div>
@@ -28,11 +29,19 @@ export const registerVisitor = (dataHost) => {
         <input type="search" name="busquedamodelos" list="listamodelos" id="host">
         <datalist id="listamodelos">
         <option value="Elvia Vega">
+<<<<<<< HEAD
+             <option value="Carlos Montesinos">
+             <option value="Margarita Flores">
+             <option value="Alex Rosales">
+             <option value="Alejandra Montenegro">
+             <option value="Susana Vegas">
+=======
              <option value="Nadia Montenegro">
              <option value="Susana Cahuantico">
              <option value="Dajhely Angles">
              <option value="Elvia Vega">
              <option value="Andrea Lopez">
+>>>>>>> b0934c3fc8717f756cf82be2f49b417aac37f33c
         </datalist>
         <p>Anfitrión(a)</p>
        </form>

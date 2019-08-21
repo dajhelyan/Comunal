@@ -1,7 +1,7 @@
-export const setUsers = (users, dni, obj) => {
-    return firebase.firestore().collection(users).doc(dni).set(obj)
-    }
-  
+export const setUsers = (objUser) => {
+  return firebase.firestore().collection("users").doc(`${objUser.dni}`).set(objUser)
+
+}
 
 export const setVisit = (objVisit) => {
   return firebase.firestore().collection("visit").add(objVisit)

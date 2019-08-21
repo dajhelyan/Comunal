@@ -1,3 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: 0px;
+    font-family: sans-serif;
+   /* box-sizing: border-box; */
+}
+
+[class*="col-"]{
+    float: left;
+    /*border: 1px solid black; */
+    padding: 20px;
+}
+
 video {
     display: block;
     height: 100%;
@@ -8,4 +22,128 @@ video {
 .foto{
     width: 60%;
     height: 30%;
+}
+
+.cam{
+    background-color: yellow;
+    float: right;
+}
+
+@media(max-width:1199px) and (min-width:992px){
+    .col-12 {width: 100%;}
+    .col-9{width: 75%;}
+    .col-6{width: 50%;}
+    .col-4{width: 33.33333333%}
+    .col-3{width: 25%}
+    .col-2{width: 16.66666667%;}
+}
+
+@media(min-width:1200px){
+    .col-12 {width: 100%;}
+    .col-9{width: 75%;}
+    .col-6{width: 50%;}
+    .col-4{width: 33.33333333%}
+    .col-3{width: 25%}
+    .col-2{width: 16.66666667%;}
+}
+
+@media(max-width:991px) and (min-width:767px){
+    .col-12 {width: 100%;}
+    .col-9{width: 75%;}
+    .col-6{width: 50%;}
+    .col-4{width: 33.33333333%}
+    .col-3{width: 25%}
+    .col-2{width: 16.66666667%;}
+}
+
+.imagenlogo{
+    width: 100px;
+    display: block;
+    margin: auto;
+}
+
+.divBtn{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-register{
+    text-decoration: none;
+    padding: 15px;
+    font-size: 20px;
+    color: #e6dde0;
+    background-color:#272727;
+    border-radius: 6px;
+    margin: 50px;
+    text-align: center;
+    display: block;
+}
+
+.antes{
+    float: right;
+}
+
+.antes:hover{
+    opacity: 0.5;
+    color: #e6dde0;
+    background-color: gray;
+}
+
+.admin{
+    float: left;
+}
+.admin:hover{
+    background-color: gray;
+    color: #e6dde0;
+}
+
+.adminTitulo{
+    margin: 40px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 850;
+    text-align: center;
+    font-size: 50px;
+    color: black;
+}
+
+.emailAdmin, .passwordAdmin{
+    display: block;
+    float: center;
+    padding: 3%;
+    outline: none;
+    background: #f0ffea;
+    margin-bottom: 7px;
+    margin-left: 260px;
+    height: 30px;
+    padding: 10px 35px;
+    border-radius: 15px;
+    border: 1px solid #e6e6e6;
+}
+
+.ingresarAdmin{   
+     font-family: verdana, arial, sans-serif; 
+    font-size: 10pt; 
+    font-weight: bold; 
+    padding: 4px; 
+    background-color: #161616; 
+    color: #ffffff; 
+    text-decoration: none; 
+    margin-left: 330px;
+    border-radius: 7px;
+    height: 40px;;
+ } 
+ .ingresarAdmin:link, 
+.ingresarAdmin:visited { 
+   border-top: 1px solid #cccccc; 
+   border-bottom: 2px solid #666666; 
+   border-left: 1px solid #cccccc; 
+   border-right: 2px solid #666666; 
+} 
+.ingresarAdmin:hover { 
+    border-bottom: 1px solid #cccccc; 
+   border-top: 2px solid #666666; 
+   border-right: 1px solid #cccccc; 
+   border-left: 2px solid #666666; 
 }

@@ -2,8 +2,11 @@ import { changeHash } from "../view-controller/firestore.js";
 export const Camera = () => {
     const createDiv = document.createElement('div');
     const camera = `
-    <video id="video" autoplay> Video </video>
-    <button id="foto" class="foto">foto </button>
+    <section>
+     <video id="video" autoplay> Video </video>
+     </section>
+    <section>
+     <button id="foto" class="foto">foto </button>
         <canvas id="canvas"></canvas>
         <img src="" id="photo" alt="photo">
     <button id="continuar"> continuar </button>
@@ -30,7 +33,7 @@ export const Camera = () => {
 
     foto.addEventListener('click', () => {
         context.drawImage(video, 50,20, 100,100);
-        var data = canvas.toDataURL('image/png');
+        let data = canvas.toDataURL('image/png');
         photo.setAttribute('src', data);
         console.log(data)
         //console.log(photo)

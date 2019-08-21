@@ -1,10 +1,11 @@
 import { changeHash } from "../view-controller/firestore.js";
-import { sendToUsers, sendToVisit,  } from "../controller/functions.js";
+import { sendToUsers } from "../controller/functions.js";
 
 export const registerVisitor = () => {
     const tmplRegisterVisitor = `
-    <div>
-    <h1>Comunal</h1>
+    <div> 
+    <div class="cam"> <a href="#/camera"> <img src="image/right-arrow.png"> </a> </div>
+    <h1>Comunal</h1> 
     <input type="text" id="dni" placeholder ='DNI o Carnet de Extranjeria'>
     <p>DNI o Carnet de Extranjeria</p>
     <input type="text" id="nombre" placeholder ='Nombre Completo' > <span><button>+</button><button>-</button></span>
@@ -35,7 +36,6 @@ export const registerVisitor = () => {
              </datalist>
         <p> Próposito de visita </p>
         </form>
-        <a href="#/camera"> Cam </a>
         <button type="button" id="register-visitor">Registrar visita</button>
         </div>
         `;
@@ -54,6 +54,5 @@ export const registerVisitor = () => {
             sendToVisit(nombre.value, dni.value, email.value, host.value,  proposito.value)
            return changeHash('#/welcome')
     })
-
     return sectionRegister;
 }

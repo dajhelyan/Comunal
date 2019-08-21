@@ -14,7 +14,7 @@ import { setUsers, setVisit, getHost } from './controller-firebase.js'
     //salida: salida
 
   }
-  return setVisit(user)
+  return setUsers('users', dni, user)
     .then((docRef) => {
       console.log(user)
       console.log(docRef)
@@ -25,18 +25,19 @@ import { setUsers, setVisit, getHost } from './controller-firebase.js'
     });
 }
 
-export const sendToVisit = (dni, host, urlfoto, proposito ) => {
+export const sendToVisit = (nombre,dni, host, proposito ) => {
   /*   const objUser = userAcces();
     console.log(objUser); */
   let user = {
+    nombre: nombre,
     dni: dni,
-    foto: urlfoto,
+    //foto: urlfoto,
     fecha: new Date(),
     host: host,
     proposito: proposito  
 
   }
-  return setUsers(user)
+  return setVisit(user)
     .then((docRef) => {
       console.log(user)
       console.log(docRef)

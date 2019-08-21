@@ -9,9 +9,12 @@ export const Administrador = () => {
     const sectionAdmin = document.createElement('section');
     sectionAdmin.innerHTML = tmplAdmin;
 
-    /* const email = sectionRegister.querySelector('#email-admin');
-    const password = sectionRegister.querySelector('#pasword-admin');
- */
-    
+    const email = sectionAdmin.querySelector('#email-admin');
+    const password = sectionAdmin.querySelector('#pasword-admin');
+
+    if(email==="admin@gmail.com" && password ==="abc123"){
+        return changeHash('#/dashboard')
+    }
+  
     return sectionAdmin;
 }

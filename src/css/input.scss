@@ -50,6 +50,19 @@ body {
 }
 
 .navbar {
+    background-color: whitesmoke;
+    height: 80px!important;
+    .logo-nav {
+        width: 50px;
+    }
+}
+
+/* font-size: 50px;
+    position: absolute;
+    top: -8px;
+    left: 465px; */
+
+/* .navbar {
     height: 80px;
     .nav { 
         position: relative;
@@ -58,10 +71,33 @@ body {
             margin: 15px;
         }
     }
+} */
+
+.arrow-cam {
+    font-size: 50px;
+    position: absolute;
+    top: 4px;
+    left: 465px;
+    
+    i {
+        color: black;
+    }
 }
 
-.cam {
+.arrow-home {
+    font-size: 50px;
     position: absolute;
-    top: 20px;
-    left: 500px;
+    top: 4px;
+    left: 15px;
+    i {
+        color: black;
+    }
+}
+
+.form-register {
+    text-align: center;
+    .form {
+        text-align: -webkit-left;
+        margin: 0 80px 0;
+    }
 }

@@ -42,16 +42,44 @@ body {
       margin-bottom: 20px; }
 
 .navbar {
-  height: 80px; }
-  .navbar .nav {
-    position: relative; }
-    .navbar .nav .logo-nav {
-      width: 50px;
-      margin: 15px; }
+  background-color: whitesmoke;
+  height: 80px !important; }
+  .navbar .logo-nav {
+    width: 50px; }
 
-.cam {
+/* font-size: 50px;
+    position: absolute;
+    top: -8px;
+    left: 465px; */
+/* .navbar {
+    height: 80px;
+    .nav { 
+        position: relative;
+        .logo-nav {
+            width: 50px;
+            margin: 15px;
+        }
+    }
+} */
+.arrow-cam {
+  font-size: 50px;
   position: absolute;
-  top: 20px;
-  left: 500px; }
+  top: 4px;
+  left: 465px; }
+  .arrow-cam i {
+    color: black; }
+
+.arrow-home {
+  font-size: 50px;
+  position: absolute;
+  top: 4px;
+  left: 15px; }
+  .arrow-home i {
+    color: black; }
+
+.form-register {
+  text-align: center; }
+  .form-register .form {
+    text-align: -webkit-left; }
 
 /*# sourceMappingURL=output.css.map */

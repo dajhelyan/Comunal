@@ -1,8 +1,5 @@
 import { changeHash } from '../view-controller/firestore.js'
 
-
-/* su, nadia, andrea,day,elvia
- */
 export const existingUser = () => {
     const tpml = `
     <div>

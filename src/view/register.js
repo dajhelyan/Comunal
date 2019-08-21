@@ -5,60 +5,54 @@ export const registerVisitor = (dataHost) => {
     console.log(dataHost)
     const tmplRegisterVisitor = `
     <div> 
-    <nav class="navbar">
-        <div class="nav-wrapper">
-        <a href="#/home" class="brand-logo nav center">
+    <nav class="">
+    <div class="nav-wrapper navbar">
+        <a href="#/home" class="brand-logo center">
             <img src="../assets/ComunalLogo.png" class="logo-nav">
         </a>
-        </div>
-    </nav>
-    
-    
-
-    <div class="cam"> <a href="#/camera"> <img src="image/right-arrow.png"> </a> </div>
-    <h1>Comunal</h1> 
-    <input type="text" id="dni" placeholder ='DNI o Carnet de Extranjeria'>
-    <p>DNI o Carnet de Extranjeria</p>
-    <input type="text" id="nombre" placeholder ='Nombre Completo' > <span><button>+</button><button>-</button></span>
-    <p>Nombre completo</p> 
-        <input type='email' id='email' placeholder ='Email'>
-        <p>Correo electrónico</p>
-        <input type="text" id="empresa" placeholder ='Empresa'>
-        <p>Empresa</p>
-        <form>
-        <input type="search" name="busquedamodelos" list="listamodelos" id="host">
-        <datalist id="listamodelos">
-        <option value="Elvia Vega">
-<<<<<<< HEAD
-             <option value="Carlos Montesinos">
-             <option value="Margarita Flores">
-             <option value="Alex Rosales">
-             <option value="Alejandra Montenegro">
-             <option value="Susana Vegas">
-=======
-             <option value="Nadia Montenegro">
-             <option value="Susana Cahuantico">
-             <option value="Dajhely Angles">
-             <option value="Elvia Vega">
-             <option value="Andrea Lopez">
->>>>>>> b0934c3fc8717f756cf82be2f49b417aac37f33c
-        </datalist>
-        <p>Anfitrión(a)</p>
-       </form>
-       
-       <form>
-        <input type="search" name="busquedamodelos" list="proposito" id="purposeOfVisit">
-        <datalist id="proposito">
-        <option value="Reunión">
-        <option value="Entrevista">
-        <option value="Amigos y familia">
-             <option value="Otros">
-             </datalist>
-        <p> Próposito de visita </p>
-        </form>
-        <button type="button" id="register-visitor">Registrar visita</button>
-        </div>
+    </div>
+  </nav>
+    <i class="arrow-cam"> <a href="#/camera"><i class="fas fa-arrow-right"></i></a></i>
+    <i class="arrow-home"><a href="#/home"><i class="fas fa-arrow-left"></i></a></i>
+    <div class="form-register">
+        <h1>Comunal</h1> 
+        <div class="form">
+            <input type="text" id="dni" placeholder ='DNI o Carnet de Extranjeria'>
+            <p>DNI o Carnet de Extranjeria</p>
+            <input type="text" id="nombre" placeholder ='Nombre Completo' > <span><button>+</button><button>-</button></span>
+            <p>Nombre completo</p> 
+                <input type='email' id='email' placeholder ='Email'>
+                <p>Correo electrónico</p>
+                <input type="text" id="empresa" placeholder ='Empresa'>
+                <p>Empresa</p>
+                <form>
+                    <input type="search" name="busquedamodelos" list="listamodelos" id="host">
+                    <datalist id="listamodelos">
+                        <option value="Elvia Vega">
+                        <option value="Carlos Montesinos">
+                        <option value="Margarita Flores">
+                        <option value="Alex Rosales">
+                        <option value="Alejandra Montenegro">
+                        <option value="Susana Vegas">
+                    </datalist>
+                    <p>Anfitrión(a)</p>
+                </form>
+            <form>
+                <input type="search" name="busquedamodelos" list="proposito" id="purposeOfVisit">
+                <datalist id="proposito">
+                    <option value="Reunión">
+                    <option value="Entrevista">
+                    <option value="Amigos y familia">
+                    <option value="Otros">
+                </datalist>
+                <p> Próposito de visita </p>
+            </form>
+                <button type="button" id="register-visitor">Registrar visita</button>
+        </div>        
+     </div>
+</div>
         `;
+
         const sectionRegister = document.createElement('section');
         sectionRegister.innerHTML = tmplRegisterVisitor;
         

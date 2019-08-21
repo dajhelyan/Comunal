@@ -58,7 +58,7 @@ export const registerVisitor = (dataHost) => {
         const email = sectionRegister.querySelector('#email');
         const empresa = sectionRegister.querySelector('#empresa'); 
         const host = sectionRegister.querySelector('#host')
-        const proposito = sectionRegister.querySelector('#propoVisit')
+        //const proposito = sectionRegister.querySelector('#propoVisit')
      
         sectionRegister.querySelector('#register-visitor').addEventListener('click', () => {
             const nombreHost = host.value;

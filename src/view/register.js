@@ -51,8 +51,8 @@ export const registerVisitor = () => {
      
         sectionRegister.querySelector('#register-visitor').addEventListener('click', () => {
             sendToUsers(nombre.value, dni.value, email.value, empresa.value)
-            sendToVisit(nombre.value, dni.value, host.value,  proposito.value)
-        return changeHash('#/welcome')
+            sendToVisit(nombre.value, dni.value, email.value, host.value,  proposito.value)
+           return changeHash('#/welcome')
     })
 
     return sectionRegister;

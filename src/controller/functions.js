@@ -1,19 +1,13 @@
-import { setUsers, setVisit, getHost } from './controller-firebase.js'
+import { setUsers, setVisit, getVisit } from './controller-firebase.js'
 
  export const sendToUsers = (nameUser, dni, email, compañia) => {
-  /*   const objUser = userAcces();
-    console.log(objUser); */
-  let user = {
+   let user = {
     //foto: urlfoto,
     name: nameUser,
     dni: dni,
     email: email,
     compañia: compañia,
-    //host: host,
-    //proposito: proposito,
-    //salida: salida
-
-  }
+    }
   return setUsers('users', dni, user)
     .then((docRef) => {
       console.log(user)
@@ -25,22 +19,23 @@ import { setUsers, setVisit, getHost } from './controller-firebase.js'
     });
 }
 
-export const sendToVisit = (nombre,dni, host, proposito ) => {
-  /*   const objUser = userAcces();
-    console.log(objUser); */
-  let user = {
+export const sendToVisit = (nombre,dni, host, proposito, email ) => {
+
+  let visit = {
     nombre: nombre,
     dni: dni,
+    email: email,
     //foto: urlfoto,
     fecha: new Date(),
     host: host,
-    proposito: proposito  
+    //proposito: proposito, 
+    //observaciones:observaciones  
 
   }
-  return setVisit(user)
+  return setVisit(visit)
     .then((docRef) => {
-      console.log(user)
-      console.log(docRef)
+      //console.log(visit)
+      //console.log(docRef)
 
     })
     .catch(function (error) {
@@ -48,24 +43,5 @@ export const sendToVisit = (nombre,dni, host, proposito ) => {
     });
 }
 
-/* export const getDataHost = () => {
-  getHost()
-  
-} */
 
-/*
-let messaging = firebase.messaging();
 
-messaging.requestPermission()
-.then(function() {
-    console.log('Have permission');
-   // return messaging.getToken();
-})
-.then(function(token) {
-    console.log(token);
-})
-.catch(function(err) {
-  mensajeFeedback(err);
-    console.log('Error Ocurred.', err);
-})
-*/

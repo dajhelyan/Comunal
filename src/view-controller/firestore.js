@@ -1,5 +1,6 @@
 export const changeHash = (hash) => { window.location.hash = hash };
-export { getUserData } from '../controller/controller-firebase.js'
+
+/* export { getUserData } from '../controller/controller-firebase.js'
 
 let dataDni = null;
 
@@ -33,4 +34,4 @@ const PrintInputDni = () => {
     divInput.innerHTML = tmpl;
 
     return divInput
-}
+} */

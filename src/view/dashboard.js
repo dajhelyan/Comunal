@@ -66,6 +66,8 @@ export const Dashboard = () => {
     getVisit(visit => {               
         //contenedorPost.innerHTML = ''
         console.log(visit)
+        console.log(visit.name)
+        console.log(visit.fecha)
         //posts.forEach((post)=> {
         //console.log(post)
        /*  const postElem = showPost(post,user)

@@ -4,7 +4,7 @@ export const Administrador = () => {
     <input class="emailAdmin" type="email" id="email-admin" placeholder="Ingresa tu email">
     <input class="passwordAdmin" type="password" id="pasword-admin" placeholder="Ingresa tu contraseña">
     <a href="#/dashboard" class="ingresarAdmin"> Ingresar </a>
-    `
+    `;
     
     const sectionAdmin = document.createElement('section');
     sectionAdmin.innerHTML = tmplAdmin;

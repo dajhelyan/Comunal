@@ -29,8 +29,6 @@ export const Camera = () => {
     }
     window.addEventListener('load', start, false);
     var context = canvas.getContext('2d');
-    console.log(context)
-
     foto.addEventListener('click', () => {
         context.drawImage(video, 50,20, 100,100);
         let data = canvas.toDataURL('image/png');

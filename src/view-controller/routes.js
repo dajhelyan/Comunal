@@ -17,6 +17,10 @@ const changeView = (route) => {
             return root.appendChild(components.welcome());
         case '#/camera':
             return root.appendChild(components.camera());
+        case '#/administrador':
+            return root.appendChild(components.administrador());
+        case '#/dashboard':
+            return root.appendChild(components.dashboard());    
         default:
             break;
     }

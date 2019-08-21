@@ -2,6 +2,7 @@ import { changeHash } from '../view-controller/firestore.js'
 
 export const viewHome = () => {
     const tmplHome = `
+<<<<<<< HEAD
     <figure class="figure-img">
         <img src="../assets/comunal.jpeg" class="fondo">
     </figure>
@@ -12,6 +13,12 @@ export const viewHome = () => {
             <a href="#/user">¿Haz estado aqui antes?</a>
         </div>
     </div>
+=======
+    <h3>Bienvenido a Comunal</h3>
+    <button type="button" id="btn-page-register">Registra tu visita</button>
+    <a href="#/user">¿Haz estado aqui antes?</a></br>
+    <a href="#/administrador">Administrador </a>
+>>>>>>> e28707114e08accf53690ce7599dd3d20134c5ee
     `
 
     const sectionHome = document.createElement('section');
@@ -21,6 +28,6 @@ export const viewHome = () => {
     btnRegisterPage.addEventListener('click', () => {
         return changeHash('#/register')
     })
-
+    
     return sectionHome;
 }

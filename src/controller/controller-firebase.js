@@ -40,13 +40,46 @@ export const getUserData = (dniUser) => {
 }
 
 
-/* Registra usuarios nuevos */
+export const setVisit = (objVisit) => {
+  return firebase.firestore().collection("visit").add(objVisit)
+}
 
-/* export const signUp = (email, password) => {
+export const getHost = (callback) => {
+  firebase.firestore().collection('host')
+  .get((querySnapshot) => {
+    const data = [];
+    querySnapshot.forEach((doc) => {
+      console.log(doc.data().id)
+        data.push({id:doc.id, 
+        nombre:doc.data().nombre,
+        dni: doc.data().dni,
+        email: doc.data().email,
+        compañia: doc.data().compañia   
+        })
+      
+    });
+  callback(data);
+  })
+}
+
+
+/* export const getHost = (dni) => {
+  return firebase.firestore().collection('host').doc(dni).get();
+};
+ 
+ Registra usuarios nuevos 
+
+export const signUp = (email, password) => {
     return firebase.auth().createUserWithEmailAndPassword(email, password)}
+<<<<<<< HEAD
 
     /* Acceso a usuarios existentes
 
+=======
+      
+     Acceso a usuarios existentes 
+  
+>>>>>>> e28707114e08accf53690ce7599dd3d20134c5ee
   export const signIn = (email, password) => {
     return firebase.auth().signInWithEmailAndPassword(email, password)}
 
@@ -56,4 +89,3 @@ export const singOut = () => {
     return firebase.auth().signOut()
  };
   */
-

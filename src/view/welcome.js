@@ -1,3 +1,5 @@
+//import {coleccionHost} from ''
+
 export const welcomeUser = () => {
     const sectionWelcome = document.createElement('section');
     const tmpl = `
@@ -7,14 +9,11 @@ export const welcomeUser = () => {
             <h3>Practicas de Higiene Personal</h3>
             <p>etdxt</p>
         </div>
-        <button>Enviar info a mi email</button>
-        <form action="mailto:loquesea@algo.com">
-        <input type="submit" />
         </form>
-        <a href="mailto:scahuantico@gmail.com"> Enviar correo </a> 
-    </div>    
-    `
+        <a href="mailto:daniela.gonzales@laboratoria.la?body=Este%20es%20el%20cuerpo%20del%20mensaje"> Enviar correo </a>    </div>    
+    `;
     sectionWelcome.innerHTML = tmpl;
 
     return sectionWelcome;
 }
+

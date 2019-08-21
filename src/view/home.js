@@ -2,9 +2,16 @@ import { changeHash } from '../view-controller/firestore.js'
 
 export const viewHome = () => {
     const tmplHome = `
-    <h3>Bienvenido a Comunal</h3>
-    <button type="button" id="btn-page-register">Registra tu visita</button>
-    <a href="#/user">¿Haz estado aqui antes?</a>
+    <figure class="figure-img">
+        <img src="../assets/comunal.jpeg" class="fondo">
+    </figure>
+    <div class="contenedor-home">
+        <img src="../assets/ComunalLogo.png" class="logo">
+        <div>
+            <button type="button" class="btn-home" id="btn-page-register">Registra tu visita aquí</button>
+            <a href="#/user">¿Haz estado aqui antes?</a>
+        </div>
+    </div>
     `
 
     const sectionHome = document.createElement('section');

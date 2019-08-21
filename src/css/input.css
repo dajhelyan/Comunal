@@ -1,0 +1,63 @@
+body {
+  margin: 0%;
+}
+
+.figure-img {
+  margin: 0%;
+  padding: 0%;
+}
+
+.figure-img .fondo {
+  background-image: url("../../assets/comunal.jpeg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.contenedor-home {
+  position: absolute;
+  top: 18%;
+  left: 135px;
+}
+
+.contenedor-home .logo {
+  width: 200px;
+  margin-left: 23px;
+  margin-bottom: 158px;
+}
+
+.contenedor-home div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedor-home div button {
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: black;
+  border-color: black;
+  color: whitesmoke;
+  font-size: 20px;
+  /* margin-left: 100px;
+            margin-right: 108px; */
+  margin-bottom: 20px;
+}
+
+.contenedor-home div a {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+/*# sourceMappingURL=input.css.map */

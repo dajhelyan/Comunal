@@ -3,9 +3,29 @@ export const setUsers = (objUser) => {
 
 }
 
+
+export const getCollectionPost = (callback, user) => {
+  const db = firebase.firestore();
+  const allPost = db.collection('post').orderBy("date", "desc")
+  allPost.onSnapshot((querySnapshot) => {
+      const data = []
+      querySnapshot.forEach((doc) => {
+          if (doc.data().state === "private" && user.uid !== doc.data().uid) {
+              return data;
+          } else {
+              data.push({ id: doc.id, ...doc.data()});
+          }
+          // doc.data() is never undefined for query doc snapshots
+          
+      });
+      callback(data);
+      // console.log(data, "222")
+  }) 
+};
+
 export const getUserData = (dniUser) => {
   const db = firebase.firestore();
-  const docRef = db.collection("user").doc(`${dniUser}`)
+  const docRef = db.collection("user").doc(`${dniUser}`).where("dni", "==", true)
 
   return docRef.get()
       .then(data => {

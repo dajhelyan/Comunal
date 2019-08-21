@@ -1,4 +1,5 @@
 import { components } from '../view/components.js';
+import { getHost, getVisit} from '../controller/controller-firebase.js'
 
 const changeView = (route) => {
     const root = document.getElementById("root");
@@ -10,7 +11,11 @@ const changeView = (route) => {
         case '#/home':
             return root.appendChild(components.home());
         case '#/register':
-            return root.appendChild(components.registerVisitor());
+                getHost(dataHost => {
+                    console.log(dataHost)
+                    root.innerHTML = ''; 
+            return root.appendChild(components.registerVisitor(dataHost));
+        })  
         case '#/user':
             return root.appendChild(components.user());
         case '#/welcome':
@@ -20,7 +25,14 @@ const changeView = (route) => {
         case '#/administrador':
             return root.appendChild(components.administrador());
         case '#/dashboard':
-            return root.appendChild(components.dashboard());    
+            return root.appendChild(components.dashboard()); 
+        case '#/email':
+                getVisit(visit => {
+                root.innerHTML = '';  
+            return root.appendChild(components.email(visit));    
+                }) 
+            
+                        
         default:
             break;
     }

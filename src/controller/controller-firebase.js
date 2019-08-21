@@ -3,7 +3,7 @@ export const setUsers = (objUser) => {
 
 }
 
-
+/* 
 export const getCollectionPost = (callback, user) => {
   const db = firebase.firestore();
   const allPost = db.collection('post').orderBy("date", "desc")
@@ -21,7 +21,7 @@ export const getCollectionPost = (callback, user) => {
       callback(data);
       // console.log(data, "222")
   }) 
-};
+}; */
 
 export const getUserData = (dniUser) => {
   const db = firebase.firestore();

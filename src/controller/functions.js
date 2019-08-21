@@ -42,6 +42,3 @@ export const sendToVisit = (nombre,dni, host, email ) => {
       console.error('Error adding document: ', error);
     });
 }
-
-
-

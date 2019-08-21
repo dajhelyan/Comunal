@@ -24,10 +24,6 @@ video {
     height: 30%;
 }
 
-.cam{
-    background-color: yellow;
-    float: right;
-}
 
 @media(max-width:1199px) and (min-width:992px){
     .col-12 {width: 100%;}

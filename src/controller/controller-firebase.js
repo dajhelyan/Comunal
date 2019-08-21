@@ -3,23 +3,6 @@ export const setUsers = (objUser) => {
 
 }
 
-export const getUserData = (dniUser) => {
-  const db = firebase.firestore();
-  const docRef = db.collection("user").doc(`${dniUser}`).where("dni", "==", true)
-
-  return docRef.get()
-      .then(data => {
-          //console.log(data)
-          if (doc.exist) {
-              console.log(data.data().dni, "2")
-              return data.data()
-          } /* else {
-              console.log('error')
-          } */
-      })
-}
-
-
 export const setVisit = (objVisit) => {
   return firebase.firestore().collection("visit").add(objVisit)
 }

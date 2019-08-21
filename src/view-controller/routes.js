@@ -12,7 +12,7 @@ const changeView = (route) => {
             return root.appendChild(components.home());
         case '#/register':
                 getHost(dataHost => {
-                    //console.log(host)
+                    console.log(dataHost)
                     root.innerHTML = ''; 
             return root.appendChild(components.registerVisitor(dataHost));
         })  

@@ -61,10 +61,22 @@ export const registerVisitor = (dataHost) => {
         const proposito = sectionRegister.querySelector('#propoVisit')
      
         sectionRegister.querySelector('#register-visitor').addEventListener('click', () => {
-            sendToUsers(nombre.value, dni.value, email.value, empresa.value)
-            sendToVisit(nombre.value, dni.value, email.value, host.value,  proposito.value)
+            const nombreHost = host.value;
+            console.log(nombreHost);
+            dataHost.forEach(element => {
+                console.log(element.nombre)
+                if(element.nombre===nombreHost){
+                    emailHost=element.email
+
+                    console.log(emailHost)
+                }
+                sendToUsers(nombre.value, dni.value, email.value, empresa.value)
+                sendToVisit(nombre.value, dni.value, email.value, host.value)
+            }); 
+
+                
             //const hostEmail = host.value
-           return changeHash('#/welcome')
+           //return changeHash('#/welcome')
     })
     return sectionRegister;
 }

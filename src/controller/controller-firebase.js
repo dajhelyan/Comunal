@@ -24,3 +24,24 @@ export const getHost = (callback) => {
   callback(data);
   })
 }
+
+export const getVisit =(callback) => {
+  firebase.firestore().collection('visit')
+  .orderBy('fecha', 'desc')
+  .onSnapshot((querySnapshot) => {
+    const data = [];
+    console.log(data)
+    querySnapshot.forEach((doc) => {
+      data.push({id:doc.id, 
+                nombre:doc.data().nombre,
+                dni: doc.data().dni,
+                fecha: doc.data().fecha,
+                host: doc.data().host, 
+                salida: doc.data().salida,
+                observaciones: doc.data().salida,
+               })
+    });
+  callback(data);
+  })
+}
+

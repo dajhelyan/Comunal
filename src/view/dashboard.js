@@ -1,44 +1,37 @@
 export const Dashboard = () => {
     const tmpldashboard = `
-    <section class="col-12">
-    <section class="col-4">
        <div class="dashBlack">
          <img src="./image/logocomunalblanco.png" class="logodash">
-          <select class="selectAdmin"> 
-           <option> Comunal Barranco </option>
-          </select>
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
+      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
        </div>
-       <div class="dashYellow">
-         <img src=""> <p class="pAdmin"> Visitantes </p>
-       </div>
-       <div class="dashBlack">
-         <div> <p class="pAdmin"> Registro de visitantes </p> </div>
-         <div> <p class="pAdmin"> Invitados </p> </div>
-         <div class=""> <img src="./image/gmail.png" class=""> <p class="pAdmin col-9"> Mensajes <p> </div>
-         <div> <img src="./image/icono1.png"> <p class="pAdmin"> Mis tareas </p> </div>
-         <div> <img src=""> <p class=""pAdmin> Clientes </p> </div>
-       </div>
-         <div class="dashBlack">
-          <p class="pAdmin"> Configuración </p>
-          <div>
-            <img src=""> <p class="pAdmin"> Main Settings </p>
-            <img src=""> <p class="pAdmin"> Notificaciones </p>
-          </div>
-       </div>
-    </section>
-    <section class="col-8">
-    <div>
-        <h3> 1 Visitante <h3> 
-        <input type="search" class="inputVisitante col-8"> <button class="btn-visitante col-3"> Nuevo visitante </buttton>
-    </div>
-    <div class="hoy col-3">
-       <button> < </button>  <button> Hoy </button> <button> > </button>
-    </div>
-    <div>
-       <img src="">
-       <img src="">
-       <img src="">
-    </div>
+   
     <div class="divList">
       <table class="table">
        <tr>
@@ -61,8 +54,6 @@ export const Dashboard = () => {
        </table>
     </div>
     <a href="#/salir"> salir </a>
-    </section>
-    </section>
     `;
     const sectionDashboard = document.createElement('section');
     sectionDashboard.innerHTML = tmpldashboard;

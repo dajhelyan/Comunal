@@ -36,53 +36,47 @@ export const Dashboard = () => {
        </div>
    
     <div class="divList">
-      <table class="table">
-       <tr>
-          <td> <input type="checkbox"> </td>
-          <td> Nombre </td>
-          <td> Observaciones </td>
-          <td> DNI/C.E </td>
-          <td> Ingreso  </td>
-          <td> Salida </td>
-        </tr>
-        <tr>
-           <td> <input type="checkbox"> </td>
-           <td>  Alex Ramírez  </td>
-           <td>  No hay  </td>
-           <td> 74148934 </td>
-           <td> 5:15 p.m </td>
-           <td>  Salió </td>
-           <td> <a href="#/singOut"> </td>
-        </tr>
-       </table>
-    </div>
-    <a href="#/salir"> salir </a>
-    <a href="#/register"> Nuevo Visitante </a>
-    `;
+    <table class="table">
+    <tr>
+    <td> <input type="checkbox"> </td>
+    <td> Nombre </td>
+    <td> Observaciones </td>
+    <td> DNI/C.E </td>
+    <td> Ingreso  </td>
+    <td> Salida </td>
+    </tr>
+    <tr>
+      <td id="visitas"></td>
+    </tr>
+
+        </table>
+        </div>
+        <a href="#/salir"> salir </a>
+        <a href="#/register"> Nuevo Visitante </a>
+        `;
+//        <td> <input type="checkbox"> </td>
     const sectionDashboard = document.createElement('section');
     sectionDashboard.innerHTML = tmpldashboard;
-
-    
-    getVisit(visit => {               
-        //contenedorPost.innerHTML = ''
-        console.log(visit)
-        console.log(visit.name)
-        console.log(visit.fecha)
-        //posts.forEach((post)=> {
-        //console.log(post)
-       /*  const postElem = showPost(post,user)
-        if(post.visibility === 'Publico'){                                    
-          contenedorPost.appendChild(postElem)
-        } else if(post.visibility === 'Privado' && user.id === post.idUser){
-          contenedorPost.appendChild(postElem)}
-          }) */
+  
+    getVisit(visit => {
+      visit.forEach(element => {
+        const visitas = document.querySelector('#visitas');
+        const createList = document.createElement('li');
+        visitas.appendChild(createList)
+        const fecha = element.fecha;
+        const tiempo = fecha.seconds;
+        console.log(tiempo)
+        let hours = Math.floor( tiempo / 31536000 );  
+        let minutes = Math.floor( (tiempo % 3600) / 60 );
+        let seconds = tiempo % 60;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        let result = hours + ":" + minutes + ":" + seconds; 
+        visitas.innerHTML += element.nombre + '' +' no hay ' + element.dni + ' ' + result + 'SingOut';                
+          console.log(element)
+          console.log(element.fecha)
+      })
         })
-                 /*
-            showAllPosts((postList) => {
-                contenedorPost.innerHTML=''
-                contenedorPost.appendChild(postList)
-            }, user);
-            */
     
 
     

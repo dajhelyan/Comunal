@@ -5,8 +5,8 @@ export const viewHome = () => {
     <h3>Bienvenido a Comunal</h3>
     <button type="button" id="btn-page-register">Registra tu visita</button>
     <a href="#/user">¿Haz estado aqui antes?</a>
-    `
-
+    <a href="#/administrador"> Administrador </a>
+    `;
     const sectionHome = document.createElement('section');
     sectionHome.innerHTML = tmplHome;
 
@@ -14,6 +14,6 @@ export const viewHome = () => {
     btnRegisterPage.addEventListener('click', () => {
         return changeHash('#/register')
     })
-
+    
     return sectionHome;
 }

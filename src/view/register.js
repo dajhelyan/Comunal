@@ -2,7 +2,10 @@ import { changeHash } from "../view-controller/firestore.js";
 import { sendToUsers } from "../controller/functions.js";
 
 export const registerVisitor = () => {
+<<<<<<< HEAD
     
+=======
+>>>>>>> 578b8157c0253b0a9d592d4a6d8885dd8039d1eb
     const tmplRegisterVisitor = `
     <div> 
     <nav class="navbar">
@@ -24,7 +27,6 @@ export const registerVisitor = () => {
         <p>Correo electrónico</p>
         <input type="text" id="empresa" placeholder ='Empresa'>
         <p>Empresa</p>
-        
         <form>
         <input type="search" name="busquedamodelos" list="listamodelos" id="host">
         <datalist id="listamodelos">
@@ -36,10 +38,16 @@ export const registerVisitor = () => {
              <option value="Susana">
         </datalist>
         <p>Anfitrión(a)</p>
+<<<<<<< HEAD
        </form>
        
        <form>
         <input type="search" name="busquedamodelos" list="proposito" id="purposeOfVisit">
+=======
+        </form>
+       <form>
+       <input type="search" name="busquedamodelos" list="proposito" id="propoVisit">
+>>>>>>> 578b8157c0253b0a9d592d4a6d8885dd8039d1eb
         <datalist id="proposito">
         <option value="Reunión">
         <option value="Entrevista">
@@ -49,6 +57,7 @@ export const registerVisitor = () => {
         <p> Próposito de visita </p>
         </form>
         <button type="button" id="register-visitor">Registrar visita</button>
+<<<<<<< HEAD
     </div>
     `;
 
@@ -67,6 +76,23 @@ export const registerVisitor = () => {
     sectionRegister.querySelector('#register-visitor').addEventListener('click', () => {
         sendToUsers(nombre.value, dni.value, email.value, empresa.value, host.value, proposito.value )
         
+=======
+        </div>
+        `;
+        const sectionRegister = document.createElement('section');
+        sectionRegister.innerHTML = tmplRegisterVisitor;
+        
+        const dni = sectionRegister.querySelector('#dni');
+        const nombre = sectionRegister.querySelector('#nombre');
+        const email = sectionRegister.querySelector('#email');
+        const empresa = sectionRegister.querySelector('#empresa'); 
+        //const host = sectionRegister.querySelector('#hostlist')
+        //const proposito = sectionRegister.querySelector('#propoVisit')
+     
+        sectionRegister.querySelector('#register-visitor').addEventListener('click', () => {
+            sendToUsers(nombre.value, dni.value, email.value, empresa.value)
+
+>>>>>>> 578b8157c0253b0a9d592d4a6d8885dd8039d1eb
         return changeHash('#/welcome')
     })
     return sectionRegister;

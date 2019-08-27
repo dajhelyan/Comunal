@@ -15,7 +15,6 @@ export const registerVisitor = () => {
     <i class="arrow-cam"> <a href="#/camera"><i class="fas fa-arrow-right"></i></a></i>
     <i class="arrow-home"><a href="#/home"><i class="fas fa-arrow-left"></i></a></i>
     <div class="form-register">
-        <h1>Comunal</h1> 
         <div class="form">
             <input type="text" id="dni" placeholder ='DNI o Carnet de Extranjeria'>
             <p>DNI o Carnet de Extranjeria</p>
@@ -47,7 +46,7 @@ export const registerVisitor = () => {
                 </datalist>
                 <p> Próposito de visita </p>
             </form>
-                <button type="button" id="register-visitor">Registrar visita</button>
+                <button type="button" class="btn-register" id="register-visitor">Registrar visita</button>
         </div>        
      </div>
 </div>

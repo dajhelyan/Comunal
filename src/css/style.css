@@ -6,11 +6,6 @@
    /* box-sizing: border-box; */
 }
 
-[class*="col-"]{
-    float: left;
-    /*border: 1px solid black; */
-    padding: 20px;
-}
 
 video {
     display: block;
@@ -93,16 +88,7 @@ video {
     color: #e6dde0;
 }
 
-.adminTitulo{
-    margin: 40px;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    font-weight: 850;
-    text-align: center;
-    font-size: 50px;
-    color: black;
-}
+
 
 .emailAdmin, .passwordAdmin{
     display: block;
@@ -175,9 +161,7 @@ video {
     margin: 7px;
 }
 
-h3{
-    margin: 25px;
-}
+
 .inputVisitante{
     height: 900px;
     height: 10px;

@@ -51,7 +51,7 @@ body {
 
 .navbar {
     background-color: whitesmoke;
-    height: 80px!important;
+    height: 70px!important;
     .logo-nav {
         width: 50px;
     }
@@ -76,7 +76,7 @@ body {
 .arrow-cam {
     font-size: 50px;
     position: absolute;
-    top: 4px;
+    top: 0px;
     left: 465px;
     
     i {
@@ -87,7 +87,7 @@ body {
 .arrow-home {
     font-size: 50px;
     position: absolute;
-    top: 4px;
+    top: 0px;
     left: 15px;
     i {
         color: black;
@@ -96,8 +96,37 @@ body {
 
 .form-register {
     text-align: center;
+    margin: 50px;
+    h3 {
+        font-size: 30px;
+        margin-bottom: 150px;
+        margin-top: 75px;
+        font-family: 'Donegal One', serif;
+    }
     .form {
         text-align: -webkit-left;
-        margin: 0 80px 0;
+        margin: 17px 25px;
+        p {
+            font-size: 16px;
+        }
+        .btn-register {
+            margin: 13px 104px;
+            border-radius: 10px;
+            /* width: 175px; */
+            /* height: 41px; */
+            background-color: black;
+            color: white;
+        
+        }
+        .continue {
+            width: 160px;
+            height: 40px;
+            border-radius: 10px;
+            margin: 20px 110px;
+            background: black;
+            color: white;
+            font-size: 20px;
+        
+        }
     }
 }

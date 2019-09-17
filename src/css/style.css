@@ -104,18 +104,7 @@ video {
     border: 1px solid #e6e6e6;
 }
 
-.ingresarAdmin{   
-     font-family: verdana, arial, sans-serif; 
-    font-size: 10pt; 
-    font-weight: bold; 
-    padding: 4px; 
-    background-color: #161616; 
-    color: #ffffff; 
-    text-decoration: none; 
-    margin-left: 330px;
-    border-radius: 7px;
-    height: 40px;;
- } 
+
  .ingresarAdmin:link, 
 .ingresarAdmin:visited { 
    border-top: 1px solid #cccccc; 

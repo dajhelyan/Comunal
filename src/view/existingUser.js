@@ -12,7 +12,7 @@ export const existingUser = () => {
         </nav>
         <i class="arrow-cam"> <a href="#/welcome"><i class="fas fa-arrow-right"></i></a></i>
         <i class="arrow-home"><a href="#/home"><i class="fas fa-arrow-left"></i></a></i>
-        <div class="form-register">
+        <div class="form-existing-user">
             <div class="form">
                 <div id="dni-user">
                     <input type="search" name="busqueda dni" list="dniUSer" id="dni-user">

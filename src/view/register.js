@@ -1,29 +1,31 @@
-import { changeHash } from "../view-controller/firestore.js";
-import { sendToUsers, sendToVisit } from "../controller/functions.js";
+/* import { changeHash } from "../view-controller/firestore.js";
+ */import { sendToUsers, sendToVisit } from "../controller/functions.js";
 
 export const registerVisitor = () => {
     //console.log(dataHost)
     const tmplRegisterVisitor = `
-    <div> 
     <nav class="">
-    <div class="nav-wrapper navbar">
         <a href="#/home" class="brand-logo center">
             <img src="../assets/ComunalLogo.png" class="logo-nav">
         </a>
-    </div>
-  </nav>
-    <i class="arrow-cam"> <a href="#/camera"><i class="fas fa-arrow-right"></i></a></i>
+    </nav>
+    <i class="arrow-cam"><a href="#/camera"><i class="fas fa-arrow-right"></i></a></i>
     <i class="arrow-home"><a href="#/home"><i class="fas fa-arrow-left"></i></a></i>
     <div class="form-register">
-        <div class="form">
-            <input type="text" id="dni" placeholder ='DNI o Carnet de Extranjeria'>
+            <input type="text" id="dni" placeholder='DNI o Carnet de Extranjeria'>
             <p>DNI o Carnet de Extranjeria</p>
-            <input type="text" id="nombre" placeholder ='Nombre Completo' > <span><button>+</button><button>-</button></span>
+            <div class="container-input-name">
+                <input type="text" id="nombre" placeholder="Nombre Completo">
+                <div>
+                    <span><p></p></span>
+                    <button>+</button>
+                    <button>-</button>
+                </div>
             <p>Nombre completo</p> 
-                <input type='email' id='email' placeholder ='Email'>
-                <p>Correo electrónico</p>
-                <input type="text" id="empresa" placeholder ='Empresa'>
-                <p>Empresa</p>
+            <input type='email' id='email' placeholder ='Email'>
+            <p>Correo electrónico</p>
+            <input type="text" id="empresa" placeholder ='Empresa'>
+            <p>Empresa</p>
                 <form>
                     <input type="search" name="busquedamodelos" list="listamodelos" id="host">
                     <datalist id="listamodelos">

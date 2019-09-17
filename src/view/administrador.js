@@ -7,12 +7,11 @@ export const Administrador = () => {
             </a>
         </div>
     </nav>
-    <div class="form-register">
-        <div class="form">
-            <h3 class="adminTitulo col-12"> "Bienvenido a Comunal" </h3>
-            <input class="emailAdmin" type="email" id="email-admin" placeholder="Ingresa tu email">
-            <input class="passwordAdmin" type="password" id="pasword-admin" placeholder="Ingresa tu contraseña">
-            <button class="btn-continue"><a href="#/dashboard" class="ingresarAdmin">Ingresar</a></button>
+    <div class="form-register-admin">
+        <div class="form-admin">
+            <input class="emailAdmin" type="email" id="email-admin" placeholder="Ingresar email">
+            <input class="passwordAdmin" type="password" id="pasword-admin" placeholder="Ingresar contraseña">
+            <button class="btn-dashboard"><a href="#/dashboard" class="ingresarAdmin">Ingresar</a></button>
         <div>
     </div>
     `;
